@@ -70,7 +70,9 @@ def all_supplies_in_holidays(holiday_hash)
      puts "#{season.to_s.capitalize}:"
             holiday.each do |days, supplies|
              puts "  #{days.to_s.split("_").map{|x|x.capitalize}.join(" ")}: #{supplies.join(", ")}"
+            binding.pry
             end
+            
         end
 end
 
@@ -83,6 +85,7 @@ def all_holidays_with_bbq(holiday_hash)
           if supplies.include?("BBQ")
             cookout << day 
           end
+          # binding.pry 
         end 
       end
       cookout
